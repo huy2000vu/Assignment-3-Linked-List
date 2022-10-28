@@ -61,11 +61,18 @@ class DLList(List):
       self.add(self.n, x)
 
     def isPalindrome(self) -> bool :
-      pass
-
+      front = self.dummy.next 
+      back = self.dummy.prev
+      if front.x != back.x: return False
+      while(front.x==back.x):
+        front = front.next
+        back = back.prev
+        if front.x!=back.x:return False
+        else:return True
+    
     def reverse(self) :
       pass
-    
+        
     def __str__(self):
         s = "["
         u = self.dummy.next
@@ -102,3 +109,13 @@ class DLList(List):
         else:
              raise StopIteration()
         return x
+
+    def absorb(self,l2):
+      while l2.size()!= 0: 
+        self.append(l2.get(0))
+        l2.remove(0)
+    '''
+    running time (big O notation) for absorb method
+    I belive the running time is based on the the length of l2 which can be n
+    there for the running time is O(n)
+    '''

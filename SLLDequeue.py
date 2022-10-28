@@ -80,7 +80,7 @@ Big O:
 O(N), N represent how many nodes are in the linked list
 -Unlike arrays, linked list has to iterate through the entire list to retrieve an element if the element happen to be in the end of the list
 -The more nodes means that the function will have to iterate 
-through all of the node to find the second to last. 
+through all of the nodes to find the second to last. 
 '''         
           
 

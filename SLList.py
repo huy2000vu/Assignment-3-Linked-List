@@ -18,7 +18,6 @@ class SLList(Stack):
       if self.n==0: self.tail = u 
       self.n+=1
       return x
-       # pass
         
     def pop(self) -> np.object:
       if self.n == 0: return None
@@ -91,7 +90,6 @@ class SLList(Stack):
         self.pop()
         i=+1
 
-
     def check_size(self):
       #return self.n
       n = 1#number of nodes
@@ -101,7 +99,15 @@ class SLList(Stack):
         n+=1
       if n == self.n: return None
       if n!=self.n: raise ('size does not match the value of n')
-      pass
+
+    def min(self):
+      u = self.head
+      smallest = u.x
+      while u.next!=None:
+        if smallest < u.x:
+          smallest = u.x
+        u=u.next
+      return smallest
       
 '''
 Big O Analysis for revevse function:
